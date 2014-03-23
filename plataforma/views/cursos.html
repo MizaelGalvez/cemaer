@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% extends "avatar.html" %}
+
+{% block material %}
+<section id="contenido">
+		<article class="item">
+			<figure class="imagen_item">
+				<img src="{{ imgcurso }}" />
+			</figure>
+			<div>
+			<h2 class="titulo_item">
+				<a href="modulos">{{ cursotitulo }}</a>
+			</h2>
+			</div>
+			<div class="extras">
+				<a href="#" class="icon-miembros"></a>
+				<a href="#" class="icon-chat"></a>
+			</div>
+		</article>
+</section>
+{% endblock %}

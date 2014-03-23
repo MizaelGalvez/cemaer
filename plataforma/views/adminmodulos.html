@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% extends "modulos.html" %}
+
+{% block avatar %}
+			<div>
+				<a class="icon-editar" href=""></a>
+				<a class="icon-miembros" href=""></a>
+				<a class="icon-mensaje" href=""></a>
+				<a class="salir" href="/log-out">Salir</a>
+			</div>
+			<img src="{{user.photos["0"]["value"]}}">
+{% endblock %}
+
+{% block admin %}
+<form method="POST" class="agregarcontenido" action="/adminmodulos/agregarmodulos">
+    	<h3>Crear un Modulo</h3>
+        <input class="titulo" type="text" placeholder="Numero y Nombre del Modulo" autofocus required>   
+        <input class="descripcion" type="text" placeholder="Que se Aprendera en este Modulo" required>
+        <button class="icon-subir"></button>
+</form>	
+{% endblock %}

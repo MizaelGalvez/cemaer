@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block avatar %}
+		<div>
+			<a class="icon-notificar" href=""></a>
+			<a class="icon-mensaje" href=""></a>
+			<a class="salir" href="/log-out">Salir</a>
+		</div>
+		<img src="{{user.photos["0"]["value"]}}">
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% extends "contenido.html" %}
+
+{% block avatar %}
+			<div>
+				<a class="icon-editar" href=""></a>
+				<a class="icon-miembros" href=""></a>
+				<a class="icon-mensaje" href=""></a>
+				<a class="salir" href="/log-out">Salir</a>
+			</div>
+			<img src="{{user.photos["0"]["value"]}}">
+{% endblock %}
+
+{% block admin %}
+<form method="POST" class="agregarcontenido" action="/admincontenido/agregarcontenido">
+    	<h3>Agregar Contenido</h3>
+        <input id="informacion" type="text" placeholder="Informacion del Modulo" autofocus required>   
+        <input id="linkvideo" type="text" placeholder="Link del contenido en Video" required>
+        <button class="icon-subir"></button>
+</form>
+{% endblock %}
+	

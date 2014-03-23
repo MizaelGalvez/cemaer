@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% extends "cursos.html" %}
+
+{% block avatar %}
+			<div>
+				<a class="icon-editar" href=""></a>
+				<a class="icon-miembros" href=""></a>
+				<a class="icon-mensaje" href=""></a>
+				<a class="salir" href="/log-out">Salir</a>
+			</div>
+			<img src="{{user.photos["0"]["value"]}}">
+{% endblock %}
+
+{% block admin %}
+<form method="POST" class="agregarcontenido" action="/admincursos/agregarcurso">
+    	<h3>Agregar Nuevo Curso</h3>
+        <input id="titulo" type="text" placeholder="Nombre del Curso" autofocus required>
+        <input id="imagen" type="text" placeholder="Link de la Imagen" required>
+        <button class="icon-subir"></button>
+</form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% extends "avatar.html" %}
+
+{% block material %}
+<a class="icon-regresar" href="modulos"></a>
+<section id="contenido">
+		<article class="item">
+			<div>
+			<h2 class="titulo_modulo">
+				<a href="#">{{ modulotitulo }}</a>
+			</h2>
+			<p>{{ modulocontenido }}</p>
+			
+
+			<p>{{ videotitulo }}</p> 
+			<iframe src="http://player.vimeo.com/71314557"  frameborder="0"></iframe>
+			
+			</div>
+			
+			<div class="extras">
+				<a href="#" class="icon-tarea"></a>
+				<a href="#" class="icon-adjuntar"></a>
+				<a href="#" class="icon-chat"></a>
+			</div>
+		</article>
+</section>	
+{% endblock %}
+

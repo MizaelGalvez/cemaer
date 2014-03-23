@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<meta name="description" content=""/>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+	<title>{% block titulo%}Cemaer : Plataforma Verde{% endblock %}</title>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/normalize.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/prefixfree.min.js"></script>
+</head>
+<body>
+	<header>
+		<figure id="logo">
+			<img src="img/iso.png" alt="cemaer">
+		</figure>
+		<h1>
+			Bienvenido {{user.username}} a la Plataforma Verde
+		</h1>
+		<figure id="avatar">
+			{% block avatar %}
+				<img src="img/nulo.png">
+			{% endblock %}
+		</figure>
+	</header>
+
+	<nav>
+	<ul>
+		<li><a href="cursos">Mis Cursos</a></li>
+		<li id="conferencia"><a href="#">Conferencia</a></li>
+	</ul>
+    </nav>
+
+	<section class="formularios">
+		<div>
+			{% block admin %}
+			{% endblock %}
+
+			{% block login %}
+				<h3>Centro de Estudios en Medio Ambiente y Energías Renovables</h3>
+			{% endblock %}
+		</div>	
+	</section>
+	<section class="material">
+		{% block material %}
+		{% endblock %}	
+	</section>
+
+	<div class="linklogo">
+	<img src="img/isocemaer.png"></div>
+	<footer>
+		<div>
+			<p><strong>Powered by <a href="#">MizaelGalvez</a></strong></p>
+			<p>cemaer.com 2014</p>
+		</div>
+		<a class="icon-twitter1" href="#"></a>
+		<a class="icon-facebook1" href="#"></a>
+		<a class="icon-location1" href="#"></a>
+		<a class="icon-telefono" href="#"></a>
+    </footer>
+
+	<script src="js/jquery.min.js"></script>
+
+</body>
+</html>
