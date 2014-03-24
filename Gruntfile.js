@@ -14,7 +14,11 @@ module.exports = function (grunt) {
         }
       }
     },
-
+    nodemon: {
+      dev: {
+      script: 'server.js'
+      }
+    },
     watch: {
       livereload: {
         options: {
@@ -33,6 +37,7 @@ module.exports = function (grunt) {
     }
   });
 
+  grunt.loadNpmTasks('grunt-nodemon');
   grunt.registerTask('server', [
     'connect:server',
     'watch'
