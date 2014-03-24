@@ -24,7 +24,7 @@ var Controladorhome = function (server) {
 
 	server.get('/', estalogeado, function (req, res) {	
 			user ="",
-		res.render('index', (user));
+		res.render('login', (user));
 	});
 
 	server.get('/cursos', NoEstaLogeado, function (req, res) {
